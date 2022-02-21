@@ -35,7 +35,7 @@ export default function Geo() {
     
 
     return (
-   <h3 className='bg-black pb-2'
+   <h3 className='bg-black pb-2 geo'
    ><i className="bi bi-geo-alt-fill"></i>
    {geolocation? geolocation:"geolocation is not supported by your browser"}
    </h3>

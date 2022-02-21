@@ -1,4 +1,13 @@
-.leaflet-container{
-    width:2 00vh;
-    height: 200px;
+:root{
+    --color-principal: #0f0e17;
+    --color-secundario: #fed941;
+    --color-letra: #fffffe;
+}
+
+.bi-geo-alt-fill{
+    color: var(--color-secundario);
+}
+.geo{
+    color: #fffffe;
+    font-size: 1rem;
 }
