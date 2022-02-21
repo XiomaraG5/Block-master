@@ -26,7 +26,7 @@ useEffect(( )=>{
             
           }
   const cargar =()=>{
-  if(lis !==null){
+  if(lis !==undefined){
     
         setNewData(
   filterItems(lis))
