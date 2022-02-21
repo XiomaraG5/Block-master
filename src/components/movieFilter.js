@@ -34,7 +34,7 @@ useEffect(( )=>{
  }
 }
   cargar()
-},[pelicula,lis,data])
+},[lis,data])
 
  useEffect(()=>{
     const listarAsyc =  async ()=>{

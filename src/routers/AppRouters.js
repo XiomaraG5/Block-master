@@ -29,7 +29,7 @@ function AppRouter() {
       }
       setChecking(false)
       })
-  }, [setIsLoggedIn,setChecking])
+  }, [setIsLoggedIn,setChecking,dispatch])
 
   if(checking){
     

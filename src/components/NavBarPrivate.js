@@ -1,4 +1,4 @@
-import { Button, Container, Nav, Navbar } from "react-bootstrap"
+import {  Nav, Navbar } from "react-bootstrap"
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom"
 import { logoutAsync } from "../redux/actions/actionLogin";
@@ -15,7 +15,7 @@ export const NavBarPrivate = ()=>{
     <Navbar className="navbar">
         <div className="contenedorNav">
         <Navbar.Brand  as={NavLink} to="/home">
-            <img src={Logo}></img> 
+            <img src={Logo} alt="img"></img> 
         </Navbar.Brand>
         <Nav className="Nav con">
         <Nav className="Nav">

@@ -8,7 +8,7 @@ export const NavBarPublic = ()=>{
         <Navbar bg="dark" variant="dark">
             <Container>
             <Navbar.Brand >
-                <img src={Logo}></img> 
+                <img src={Logo} alt="img"></img> 
             </Navbar.Brand>
             <Nav className="d-flex">
                 <Nav.Link  as={NavLink} to="/login/singin" className="title"

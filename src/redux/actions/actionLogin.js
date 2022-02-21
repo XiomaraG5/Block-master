@@ -1,8 +1,6 @@
 import {getAuth, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
-import { addDoc, collection } from "firebase/firestore";
-import { db, google } from "../../firebase/firebaseConfig";
+import { google } from "../../firebase/firebaseConfig";
 import { types } from "../types/type";
-import { registroAsync } from "./actionRegister";
 
 
 export const loginGoogleAsync = ()=>{

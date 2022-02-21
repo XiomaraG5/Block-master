@@ -1,9 +1,8 @@
 
 import {  useFormik } from 'formik'
-import React, {  useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import FormChange from '../components/FormChange'
 import { MostarPeliculas } from '../components/MostarPeliculas'
 import { fileUpload } from '../helpers/Url'
 import { newMovieUserAsync } from '../redux/actions/actionUserMovies'

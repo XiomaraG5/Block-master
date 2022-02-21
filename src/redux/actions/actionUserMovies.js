@@ -1,5 +1,4 @@
-import { addDoc, arrayUnion, collection, collectionGroup, doc, getDoc, getDocs, query, setDoc, updateDoc, where } from "firebase/firestore"
-import { useDispatch, useSelector } from "react-redux"
+import {doc, getDoc,  setDoc, updateDoc} from "firebase/firestore"
 import { db } from "../../firebase/firebaseConfig"
 import { typeUser } from "../types/type"
 
@@ -27,7 +26,7 @@ export const gettingUserAsync= async (user)=>{
                 
             })
             
-            const dataUser = User.data()
+            
             console.log(UserRef.parent);
         }         
     const UserRef = doc(db,`user/${user.email}`);
@@ -47,9 +46,6 @@ export const dispatchUser=(user)=>{
         const dataUser = User.data()
         const usuario = dataUser.dataOfUser
 
-        const moviesRef = collection(db,"Peliculas")
-        const moviesSnap = await getDocs(moviesRef)
-        const moviesList = moviesSnap.docs.map(doc => doc.data());
 
         const moviesUser = await getDoc(doc(db,`user/${user.email}`))
             const moviee =moviesUser.data().peliculas
@@ -128,7 +124,7 @@ const newMoviesUser= (newArray)=>{
 
 export  const deleteMovie=(email,state,id)=>{
         return async (dispatch)=>{
-            const newArray = state.filter(m=>(m.id != id))
+            const newArray = state.filter(m=>(m.id !== id))
             await updateDoc(doc(db,"user",email),{
                         peliculas: [...newArray]
                     })  
