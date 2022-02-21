@@ -1,28 +1,43 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { Card } from 'react-bootstrap'
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../firebase/firebaseConfig'
-import {  useDispatch, useSelector } from 'react-redux'
+import {  useSelector } from 'react-redux'
 const { v4: uuidv4 } = require('uuid');
 
 
 export  const   MovieFilter = ({pelicula})=> {
   
 
-  const dispatch = useDispatch
+  
        const buscar = useSelector(state=>state.user.userMovies)
   const [data,setData]=useState([])
   const [newData,setNewData] =useState([])
   
-  useEffect(()=>{
-listarAsyc ()
-  },[setData])
+ 
 const lis = pelicula.pelicula
-useEffect(()=>{
-  
+
+useEffect(( )=>{
+  function filterItems(para) {
+            return data.filter(function(el) {
+                return el.original_title.toLowerCase().indexOf(para.toLowerCase()) > -1;
+                
+            })
+            
+          }
+  const cargar =()=>{
+  if(lis !==null){
+    
+        setNewData(
+  filterItems(lis))
+   
+ }
+}
   cargar()
-},[pelicula])
- const listarAsyc =  async ()=>{
+},[pelicula,lis,data])
+
+ useEffect(()=>{
+    const listarAsyc =  async ()=>{
    const moviesDefault = await getDocs(collection(db,"Peliculas"))
        const mi = moviesDefault.docs.map(el=>el.data())
        const mo =  [...buscar,...mi];
@@ -31,8 +46,9 @@ useEffect(()=>{
        console.log(buscar);
     console.log(mi);
    
-  
  }
+  listarAsyc ()
+ },[buscar])
 
 
 
@@ -41,21 +57,8 @@ useEffect(()=>{
   console.log(buscar);
 console.log(data);
 console.log(pelicula.pelicula);
-  function filterItems(para) {
-            return data.filter(function(el) {
-                return el.original_title.toLowerCase().indexOf(para.toLowerCase()) > -1;
-                
-            })
-            
-          }
- const cargar =()=>{
-  if(lis !==null){
-    
-        setNewData(
-  filterItems(lis))
-   
- }
-}
+  
+ 
 
 
 
