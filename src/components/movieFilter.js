@@ -1,9 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card } from 'react-bootstrap'
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../firebase/firebaseConfig'
 import {  useDispatch, useSelector } from 'react-redux'
-import { render } from '@testing-library/react'
 const { v4: uuidv4 } = require('uuid');
 
 
