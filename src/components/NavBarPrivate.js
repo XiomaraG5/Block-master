@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom"
 import { logoutAsync } from "../redux/actions/actionLogin";
 import Logo from "../assets/logo-blockBuster.png"
-import Bucardor from "./Bucardor";
+import Bucardor from "./Buscardor";
 
 export const NavBarPrivate = ()=>{
     const dispatch = useDispatch();
@@ -22,15 +22,15 @@ export const NavBarPrivate = ()=>{
                 <Nav.Link  as={NavLink} to="/home"
             style={({ isActive }) => isActive ? { color: "yellow" } : { color: "lightgrey" }} >Home</Nav.Link>
             <Nav.Link as={NavLink} to="/mas"
-            style={({ isActive }) => isActive ? { color: "yellow" } : { color: "lightgrey" }} >Mas valoradas</Nav.Link>
+            style={({ isActive }) => isActive ? { color: "yellow" } : { color: "lightgrey" }} >Populars</Nav.Link>
             <Nav.Link as={NavLink} to="/menos"
-            style={({ isActive }) => isActive ? { color: "yellow" } : { color: "lightgrey" }} >Menos valoradas</Nav.Link>
+            style={({ isActive }) => isActive ? { color: "yellow" } : { color: "lightgrey" }} >Less populars</Nav.Link>
             <Nav.Link as={NavLink} to="/mis"
-            style={({ isActive }) => isActive ? { color: "yellow" } : { color: "lightgrey" }} >Mis peliculas</Nav.Link>
+            style={({ isActive }) => isActive ? { color: "yellow" } : { color: "lightgrey" }} >My movies</Nav.Link>
             </Nav>
             <Bucardor  />
             <button id="btn" onClick={()=>handleLogout()}>
-                salir
+                Out
             </button>
         </Nav>
         </div>

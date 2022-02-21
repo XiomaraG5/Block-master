@@ -2,18 +2,14 @@
 export const types ={
     login: 'login',
     logout:'logout',
-    register: 'register',
-    createMovie: '[movie] createmovie',
-    readMovie: '[movie] readmovie',
-    updataMovie: '[movie] updatamovie',
-    deleteMovie: '[movie] deletemovie',
-    noMovie: '[movie] nomovie'
+    register: 'register'
 }
 
 
 
-export const typeMovie={
-    register:'register',
-    list: 'list',
-    delete: 'delete'
+export const typeUser={
+    newMovie:"[user]newMovie",
+    deleteMovie:"[user]deleteMovie",
+    udDataMovie:"[user]udDataMovie",
+    getCurrentUser:"[user]getCurrentUser"
 }

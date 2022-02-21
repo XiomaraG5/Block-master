@@ -1,12 +1,16 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Card, Container } from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 import Carrusel from '../components/Carrusel';
+import Geo from '../components/Geo';
 import { API_URL } from '../helpers/Url';
 
 export default function Home() {
  
   const [datos,setDatos]=useState([])
+   const veo = useSelector(state=>state.user)
+   console.log(veo);
 
 useEffect(() => {
   getData()
@@ -28,6 +32,7 @@ useEffect(() => {
 
   return (
     <div >
+      <Geo />
       <Carrusel datos={datos}/>
       <div className='containere '>
         {datos.map(pelicula =>(

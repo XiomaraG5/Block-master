@@ -10,14 +10,14 @@ export const loginGoogleAsync = ()=>{
         const auth = getAuth();
         signInWithPopup(auth,google)
         .then(({user}) =>{
-            dispatch(actionLogin(user.uid, user.displayName)) 
-           
-        })
+            dispatch(actionLogin(user.uid, user.displayName))  
+             })
         .catch(error =>{
             console.log(error);
         })
     }
 }
+
 export const loginEmailAsync = (email,pass)=>{
     return(dispatch)=>{
         const auth = getAuth();

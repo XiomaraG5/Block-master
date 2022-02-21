@@ -1,13 +1,15 @@
 import { createStore,combineReducers, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import { loginReducer } from "../redux/reducers/LoginReducer";
-import registerReducer from "../redux/reducers/registerReducer";
+import { loginReducer } from "../reducers/LoginReducer";
+import registerReducer from "../reducers/registerReducer";
+import UserMoviesReducer from "../reducers/UserMoviesReducer";
 
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 const reducers = combineReducers({
     login:loginReducer,
-    register:registerReducer
+    register:registerReducer,
+    user: UserMoviesReducer
 })
 
 export const store = createStore(

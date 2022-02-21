@@ -1,4 +1,4 @@
-import { types } from "../../types/type";
+import { types } from "../types/type";
 
 
 export default function registerReducer(state={},action) {

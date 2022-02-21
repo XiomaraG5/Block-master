@@ -1,3 +1,5 @@
+@use "buscador";
+@use "mapa";
 :root{
     --color-principal: #0f0e17;
     --color-secundario: #fed941;
@@ -107,6 +109,7 @@ body{
     display: flex;
     align-items: center;
     margin-right: 2%;
+    position: relative;
     .buscador{
         background-color: transparent;
         border: 1px solid var(--color-secundario);
@@ -123,4 +126,104 @@ body{
 }
 
 
+
+.contenedorMispeliculas{
+    display: flex;
+    flex-direction: column;
+    .button{
+        background-color: transparent;
+        height:26px;
+        border-radius: 3px;
+        border: none;
+        border-bottom: 1px solid var(--color-secundario);
+        color: #fffffe;
+        width: 20%;
+        margin-left: 2%;
+        margin-top: 2%;
+        justify-self: right;
+        .bi{
+        color: transparent;
+        font-size: 1rem;
+        }
+    }
+    .button:hover{
+        color: var(--color-secundario);
+        .bi{
+            color: var(--color-secundario);
+        }
+    }
+    .formMovie{
+        color: var(--color-letra);
+        .inputMovie{
+            background-color: transparent;
+            border: 1px solid var(--color-letra);
+            color: var(--color-secundario);
+        }
+        .file{
+            color: #fffffe;
+        }
+        .bi-x-octagon{
+            display: block;
+            width: 100%;
+            text-align: right;
+            margin-bottom: 2%;
+            color: var(--color-secundario) ;
+        }
+    }
+}
+.pelis{
+    .peliculauser{
+        height: 80px;
+        overflow:hidden;
+        display: flex;
+        
+        .imgUser{
+            width: 5rem;
+        }
+        
+    }
+    .peliculauser:hover{
+        height: auto;
+        overflow:visible;
+        .imgUser{
+            width: 100%;
+        }
+        .contendorPelis{
+        align-self: center;
+        }
+        .contendorPelisbtn{
+        align-items: center;
+        button{
+            height: 70px;
+            width: 60px;
+        }
+    }
+    }
+    h3{
+        color: var(--color-secundario);
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    p{
+        color:var(--color-letra) ;
+    }
+    hr{
+        color: var(--color-secundario);
+    }
+    .contendorPelisbtn{
+        display: flex;
+        justify-content: space-around;
+        // align-items: center;
+    }
+    .bi{
+        color: var(--color-letra);
+        font-size: 1rem;
+    }
+    button{
+        background-color: transparent;
+        height:26px;
+        border-radius: 3px;
+        border: 1px solid var(--color-secundario);
+    }
+}
 

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import AppRouter from './routers/AppRouters';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Provider} from 'react-redux'
-import { store } from './store/store';
+import { store } from './redux/store/store';
 import "./styles/myStyle.css"
 
 
