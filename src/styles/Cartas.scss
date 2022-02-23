@@ -3,12 +3,20 @@
     --color-secundario: #fed941;
     --color-letra: #fffffe;
 }
+.contendorCaja{
+    width: 80%;
+    margin: auto;
+    .cards{
+        margin: 2px;
+    }
+}
 .carta{
     background-color: transparent;
     border: 1px solid var(--color-secundario);
     color: var(--color-letra);
     position: relative;
     overflow: hidden;
+    height: 407px;
     .title{
         text-align: center;
     }
@@ -27,6 +35,8 @@
         top: 100%;
     }
 }
+ 
+
 .carta:hover{
     .overview{
         top: 0px;

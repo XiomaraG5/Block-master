@@ -29,12 +29,21 @@
   --color-letra: #fffffe;
 }
 
+.contendorCaja {
+  width: 80%;
+  margin: auto;
+}
+.contendorCaja .cards {
+  margin: 2px;
+}
+
 .carta {
   background-color: transparent;
   border: 1px solid var(--color-secundario);
   color: var(--color-letra);
   position: relative;
   overflow: hidden;
+  height: 407px;
 }
 .carta .title {
   text-align: center;
@@ -64,6 +73,34 @@
   overflow: scroll;
   text-align: justify;
   font-size: 0.8rem;
+}
+
+:root {
+  --color-principal: #0f0e17;
+  --color-secundario: #fed941;
+  --color-letra: #fffffe;
+}
+
+.modal {
+  background-color: #0f0e179f;
+}
+.modal .modalHeader {
+  background-color: var(--color-principal);
+  border-top: 1px solid var(--color-secundario);
+  border-left: 1px solid var(--color-secundario);
+  border-right: 1px solid var(--color-secundario);
+  color: #fffffe;
+}
+.modal .modalBody {
+  border-left: 1px solid var(--color-secundario);
+  border-right: 1px solid var(--color-secundario);
+  background-color: var(--color-principal);
+}
+.modal .modalFooter {
+  background-color: var(--color-principal);
+  border-left: 1px solid var(--color-secundario);
+  border-right: 1px solid var(--color-secundario);
+  border-bottom: 1px solid var(--color-secundario);
 }
 
 :root {
@@ -285,4 +322,4 @@ body {
   border: 1px solid var(--color-secundario);
 }
 
-/*# sourceMappingURL=mystyle.css.map */
+/*# sourceMappingURL=myStyle.css.map */
