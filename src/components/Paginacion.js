@@ -26,14 +26,15 @@ export default function Paginacion() {
         })
 }
 getData()
-    },[setDatos])
+    },[setDatos,setCounter])
 
     const showMore =(e)=>{
         e.preventDefault()
         setCounter(
-            +1
+            counter+1
         )
         moreData()
+        console.log(counter);
     }
     const moreData=()=>{
         axios.get(API_URL+counter)

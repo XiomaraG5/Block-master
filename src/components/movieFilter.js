@@ -78,7 +78,7 @@ console.log(pelicula.pelicula);
       {newData.map(pelicula =>(
       <Card style={{ width: '12rem' }}
       onClick={()=>handleShow(pelicula)}
-      className="mb-2 carta" key={uuidv4()}>
+      className="mb-2 carta "id="cartasbuscador" key={uuidv4()}>
         {pelicula.poster_path?<Card.Img variant="top" 
         src={`https://image.tmdb.org/t/p/w1280`+pelicula.poster_path}/>:
         <Card.Img variant="top" src={pelicula.image_path}/>}

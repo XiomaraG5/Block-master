@@ -7,6 +7,7 @@ import Geo from '../components/Geo';
 import { Modaltrailers } from '../components/Modaltrailers';
 import Paginacion from '../components/Paginacion';
 import { API_URL } from '../helpers/Url';
+const { v4: uuidv4 } = require('uuid');
 
 export default function Home() {
  
@@ -45,15 +46,19 @@ useEffect(() => {
     const handleClose=()=>{
       setShow(false)
     }
+    const handleUp=(e)=>{
+      e.preventDefault()
+     window.scrollTo(0,0)
+    }
 
   return (
-    <div >
+    <div className='big' >
       <Geo />
       <Carrusel datos={datos}/>
       <div className='containere '>
         {datos.map(pelicula =>(
       <Card style={{ width: '12rem' }} 
-      className="mb-2 carta" key={pelicula.id}
+      className="mb-2 carta" key={uuidv4()}
        onClick={()=>handleShow(pelicula)}>
         <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w1280`+pelicula.poster_path}/>
         <Card.Body>
@@ -79,6 +84,7 @@ useEffect(() => {
           </Button>
         </Modal.Footer>
       </Modal>
+      <button className='sticky' onClick={handleUp}>ir arriba</button>
     </div>
   )
 }

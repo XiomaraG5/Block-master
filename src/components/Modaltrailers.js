@@ -17,17 +17,14 @@ export const Modaltrailers = (info) => {
                 console.log(trailers);
                 const trailer = trailers[0]
                 console.log(trailer);
-                // trailers.forEach((video,i)=>{
-                    let { key, site}= trailer
-                    console.log(site);
-                //     console.log(video);
-                    if(site === "YouTube"){
-                        setData(`https://www.youtube.com/embed/${key}`)
-                        }
-                    // })
+                let { key, site}= trailer
+                console.log(site);
+                if(site === "YouTube"){
+                    setData(`https://www.youtube.com/embed/${key}`)
                 }
-            })
-        }
+            }
+        })
+     }
         getData()
     },[id,name])
     console.log(info.info.name);

@@ -1,13 +1,123 @@
-.search {
-  position: absolute;
-  z-index: 10;
-  top: 220%;
-  width: 100vw;
-  left: -69vw;
-  padding: 2%;
-  background-color: #0f0e17;
+:root {
+  --color-principal: #0f0e17;
+  --color-secundario: #fed941;
+  --color-letra: #fffffe;
 }
 
+.body {
+  position: relative;
+}
+
+.search {
+  position: fixed;
+  z-index: 10;
+  padding: 2%;
+  left: 0px;
+  top: 0px;
+  padding-top: 50px;
+  width: 100%;
+  background-color: #0f0e1798;
+  overflow: auto;
+}
+
+#cartasbuscador {
+  background-color: var(--color-principal);
+}
+
+.sticky {
+  position: fixed;
+  bottom: 2vw;
+  right: 10px;
+  color: #fffffe;
+  background-color: var(--color-principal);
+  border: 1px solid var(--color-secundario);
+  outline: none;
+}
+
+.Responsive {
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2% 1% 2%;
+  display: none;
+}
+
+.medio {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+}
+
+.toggle {
+  background-color: var(--color-principal);
+  outline: none;
+}
+
+.toggle:active {
+  background-color: var(--color-principal);
+}
+
+.toggle:hover {
+  outline: none;
+}
+
+.menu {
+  background-color: var(--color-principal);
+  padding: 2%;
+}
+
+#react-aria3190670730-5.btn.toggle.dropdown-toggle.btn-primary {
+  background-color: var(--color-principal) !important;
+  outline: none !important;
+  border: 1px solid var(--color-secundario) !important;
+}
+
+#react-aria3190670730-5:focus {
+  outline: none;
+}
+
+.dropdowne:active {
+  outline: none;
+  color: transparent !important;
+}
+
+#react-aria4575991650-1 {
+  background-color: transparent !important;
+  border: 1px solid var(--color-secundario) !important;
+  outline: none;
+}
+
+.menuItem:hover {
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-secundario);
+}
+
+@media (max-width: 450px) {
+  .Responsive {
+    display: flex;
+  }
+
+  .medio {
+    display: none !important;
+  }
+}
+@media (max-width: 800px) {
+  .medio {
+    display: flex;
+  }
+}
+@media (min-width: 800px) {
+  .medio {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .navbar {
+    display: none;
+  }
+}
 :root {
   --color-principal: #0f0e17;
   --color-secundario: #fed941;
@@ -43,7 +153,7 @@
   color: var(--color-letra);
   position: relative;
   overflow: hidden;
-  height: 407px;
+  height: 450px;
 }
 .carta .title {
   text-align: center;
@@ -144,12 +254,14 @@ body {
   border: 1px solid var(--color-secundario);
   height: 30px;
   padding-bottom: 5%;
+  outline: none;
 }
 
 .btn:hover {
   transform: scale(1.1, 1.1);
   background-color: transparent;
   border: 3px solid var(--color-secundario);
+  outline: none;
 }
 
 .carrusel {
@@ -212,7 +324,6 @@ body {
   display: flex;
   align-items: center;
   margin-right: 2%;
-  position: relative;
 }
 .containerB .buscador {
   background-color: transparent;
@@ -320,6 +431,7 @@ body {
   height: 26px;
   border-radius: 3px;
   border: 1px solid var(--color-secundario);
+  outline: none;
 }
 
 /*# sourceMappingURL=myStyle.css.map */

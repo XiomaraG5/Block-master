@@ -53,7 +53,7 @@ console.log(state2);
   return (
     <div className=" contenedorMispeliculas " >
     <Form className="form formMovie m-auto " onSubmit={formik.handleSubmit}>
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem' }}className="mb-4 m-auto ">
             <Card.Img  src={image_path} alt="tu peli bb" />
         </Card >
         <Form.Group className="mb-3">

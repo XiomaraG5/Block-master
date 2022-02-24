@@ -42,11 +42,13 @@ body{
     border: 1px solid var(--color-secundario);
     height: 30px;
     padding-bottom: 5%;
+    outline: none;
 }
 .btn:hover{
     transform: scale(1.1, 1.1);
     background-color: transparent;
     border: 3px solid var(--color-secundario);
+    outline: none;
 }
 .carrusel{
     height: 300px;
@@ -111,7 +113,7 @@ body{
     display: flex;
     align-items: center;
     margin-right: 2%;
-    position: relative;
+    
     .buscador{
         background-color: transparent;
         border: 1px solid var(--color-secundario);
@@ -226,6 +228,8 @@ body{
         height:26px;
         border-radius: 3px;
         border: 1px solid var(--color-secundario);
+        outline: none;
     }
 }
+
 

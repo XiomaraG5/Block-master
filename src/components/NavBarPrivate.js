@@ -1,4 +1,4 @@
-import {  Nav, Navbar } from "react-bootstrap"
+import {   Dropdown, Nav, Navbar } from "react-bootstrap"
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom"
 import { logoutAsync } from "../redux/actions/actionLogin";
@@ -11,7 +11,7 @@ export const NavBarPrivate = ()=>{
         dispatch(logoutAsync())
     }
     return(
-        
+        <>
     <Navbar className="navbar">
         <div className="contenedorNav">
         <Navbar.Brand  as={NavLink} to="/home">
@@ -35,6 +35,54 @@ export const NavBarPrivate = ()=>{
         </Nav>
         </div>
   </Navbar>
+  <div className="medio">
+    <Navbar.Brand  as={NavLink} to="/home">
+            <img src={Logo} alt="img"></img> 
+    </Navbar.Brand>
+    <Bucardor  />
+    <Dropdown className="toggle">
+    <Dropdown.Toggle className=" toggle"  >
+        <i className="bi bi-list"></i>
+    </Dropdown.Toggle>
+    <Dropdown.Menu className="menu"
+    >
+        <Dropdown.Item className="menuItem"  as={NavLink} to="/home"
+                style={({ isActive }) => isActive ? { color: "yellow", background: "#0f0e17" } : { color: "lightgrey" }} >Home</Dropdown.Item>
+        <Dropdown.Item className="menuItem" as={NavLink} to="/mas"
+                style={({ isActive }) => isActive ? { color: "yellow", background: "#0f0e17" } : { color: "lightgrey" }} >Populars</Dropdown.Item>
+        <Dropdown.Item className="menuItem" as={NavLink} to="/menos"
+                style={({ isActive }) => isActive ? { color: "yellow", background: "#0f0e17" } : { color: "lightgrey" }} >Less populars</Dropdown.Item>
+        <Dropdown.Item className="menuItem" as={NavLink} to="/mis"
+                style={({ isActive }) => isActive ? { color: "yellow", background: "#0f0e17" } : { color: "lightgrey" }} >My movies</Dropdown.Item>
+    </Dropdown.Menu>
+</Dropdown>
+</div>
+  <div className="Responsive">
+      <Navbar.Brand  as={NavLink} to="/home">
+            <img src={Logo} alt="img"></img> 
+        </Navbar.Brand>
+ <Dropdown className="toggle">
+     
+  <Dropdown.Toggle className=" toggle"  >
+    <i className="bi bi-list"></i>
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu className="menu"
+  >
+    <Dropdown.Item className="menuItem"  as={NavLink} to="/home"
+            style={({ isActive }) => isActive ? { color: "yellow", background: "#0f0e17" } : { color: "lightgrey" }} >Home</Dropdown.Item>
+    <Dropdown.Item className="menuItem" as={NavLink} to="/mas"
+            style={({ isActive }) => isActive ? { color: "yellow", background: "#0f0e17" } : { color: "lightgrey" }} >Populars</Dropdown.Item>
+    <Dropdown.Item className="menuItem" as={NavLink} to="/menos"
+            style={({ isActive }) => isActive ? { color: "yellow", background: "#0f0e17" } : { color: "lightgrey" }} >Less populars</Dropdown.Item>
+    <Dropdown.Item className="menuItem" as={NavLink} to="/mis"
+            style={({ isActive }) => isActive ? { color: "yellow", background: "#0f0e17" } : { color: "lightgrey" }} >My movies</Dropdown.Item>
+            <Bucardor  />
+  </Dropdown.Menu>
+  
+</Dropdown>
+</div>
+  </>
         
     )
 }
