@@ -95,7 +95,7 @@
 }
 
 @media (max-width: 450px) {
-  .Responsive {
+  .Responsive, #navPublic {
     display: flex;
   }
 
@@ -104,7 +104,7 @@
   }
 }
 @media (max-width: 800px) {
-  .medio {
+  .medio, #navPublic {
     display: flex;
   }
 }
@@ -185,6 +185,10 @@
   font-size: 0.8rem;
 }
 
+.btnMostrarMovie:hover {
+  transform: none;
+}
+
 :root {
   --color-principal: #0f0e17;
   --color-secundario: #fed941;
@@ -255,12 +259,17 @@ body {
   height: 30px;
   padding-bottom: 5%;
   outline: none;
+  color: #fffffe;
 }
 
 .btn:hover {
   transform: scale(1.1, 1.1);
   background-color: transparent;
   border: 3px solid var(--color-secundario);
+  outline: none;
+}
+
+.btn:active {
   outline: none;
 }
 
@@ -390,22 +399,11 @@ body {
 .pelis .peliculauser .imgUser {
   width: 5rem;
 }
-.pelis .peliculauser:hover {
-  height: auto;
-  overflow: visible;
+.pelis .peliculauser button:hover {
+  border: 1px solid var(--color-letra);
 }
-.pelis .peliculauser:hover .imgUser {
-  width: 100%;
-}
-.pelis .peliculauser:hover .contendorPelis {
-  align-self: center;
-}
-.pelis .peliculauser:hover .contendorPelisbtn {
-  align-items: center;
-}
-.pelis .peliculauser:hover .contendorPelisbtn button {
-  height: 70px;
-  width: 60px;
+.pelis .peliculauser button:hover i {
+  color: var(--color-secundario);
 }
 .pelis h3 {
   color: var(--color-secundario);
@@ -431,6 +429,10 @@ body {
   height: 26px;
   border-radius: 3px;
   border: 1px solid var(--color-secundario);
+  outline: none;
+  color: #fffffe;
+}
+.pelis button:active {
   outline: none;
 }
 

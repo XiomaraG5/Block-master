@@ -82,7 +82,7 @@
 }
 
 @media  (max-width:450px){
-    .Responsive{
+    .Responsive,#navPublic{
         display: flex;
         
     }
@@ -92,7 +92,7 @@
     
 }
 @media (max-width:800px) {
-    .medio{
+    .medio,#navPublic{
         display: flex;
     }
 }

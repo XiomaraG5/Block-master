@@ -54,7 +54,11 @@ export const NavBarPrivate = ()=>{
                 style={({ isActive }) => isActive ? { color: "yellow", background: "#0f0e17" } : { color: "lightgrey" }} >Less populars</Dropdown.Item>
         <Dropdown.Item className="menuItem" as={NavLink} to="/mis"
                 style={({ isActive }) => isActive ? { color: "yellow", background: "#0f0e17" } : { color: "lightgrey" }} >My movies</Dropdown.Item>
+        <button id="btn" onClick={()=>handleLogout()}>
+                Out
+        </button>
     </Dropdown.Menu>
+    
 </Dropdown>
 </div>
   <div className="Responsive">
@@ -78,6 +82,9 @@ export const NavBarPrivate = ()=>{
     <Dropdown.Item className="menuItem" as={NavLink} to="/mis"
             style={({ isActive }) => isActive ? { color: "yellow", background: "#0f0e17" } : { color: "lightgrey" }} >My movies</Dropdown.Item>
             <Bucardor  />
+            <button id="btn" onClick={()=>handleLogout()}>
+                Out
+            </button>
   </Dropdown.Menu>
   
 </Dropdown>

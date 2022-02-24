@@ -5,7 +5,7 @@ import Logo from "../assets/logo-blockBuster.png"
 export const NavBarPublic = ()=>{
     return(
         <>
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" id="navPublic">
             <Container>
             <Navbar.Brand >
                 <img src={Logo} alt="img"></img> 

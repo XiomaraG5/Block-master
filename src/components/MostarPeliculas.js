@@ -20,6 +20,7 @@ export const MostarPeliculas = ({state}) => {
   const modalChange = (e) => {
     e.preventDefault();
     setModal(true);
+    window.scrollTo(0,0)
     const id = e.target.getAttribute("id");
     const movieFind =state.find(mo=>(mo.id ===id))
     setNewData(
@@ -77,10 +78,14 @@ const handleDelete =(e)=>{
           <p>{ele.overview}</p>
         </Col>
         <Col className="contendorPelisbtn">
-          <button id={ele.id} onClick={handleDelete}>
+          <button id={ele.id} 
+          className="btnMostrarMovie"
+          onClick={handleDelete}>
             <i className="bi bi-trash"id={ele.id}></i>
           </button>
-          <button id={ele.id} onClick={modalChange}>
+          <button id={ele.id}
+          className="btnMostrarMovie"
+          onClick={modalChange}>
             <i className="bi bi-pencil" id={ele.id}></i>
           </button>
         </Col>
