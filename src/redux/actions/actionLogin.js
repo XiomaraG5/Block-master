@@ -36,10 +36,12 @@ export const logoutAsync=()=>{
         .then((user)=>{
             console.log("chao");
             console.log(user);
+            dispatch(actionLogout())
         })
         .catch(error =>{
             console.log(error);
         })
+        
     }
 }
 export default function actionLogin(id,displayname) {
@@ -51,7 +53,11 @@ export default function actionLogin(id,displayname) {
         }
     }
 }
-
+export const actionLogout = ()=>{
+    return{
+        type:types.logout
+    }
+}
 // const actionLoginEmail =(email,password)=>{
 //     return{
 //         type: types.login,

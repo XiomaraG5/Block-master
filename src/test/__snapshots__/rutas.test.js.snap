@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`verificar rutas verificar ruta privada 1`] = `ShallowWrapper {}`;
+
+exports[`verificar rutas verificar ruta publica 1`] = `ShallowWrapper {}`;

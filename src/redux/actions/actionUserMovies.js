@@ -5,7 +5,7 @@ import { typeUser } from "../types/type"
 
 
 
-const gettingUserSyn=(usuario,moviesList)=>{
+export const gettingUserSyn=(usuario,moviesList)=>{
     return{
         type:typeUser.getCurrentUser,
         payload:{usuario,moviesList}
@@ -58,7 +58,7 @@ export const dispatchUser=(user)=>{
     }
 }
 
-const newMovieUser= (newMovie)=>{
+export const newMovieUser= (newMovie)=>{
     return{
         type:typeUser.newMovie,
         payload:newMovie
